@@ -1,0 +1,90 @@
+﻿@page "/fetchdata"
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using Gujjar.Shared
+@attribute [Authorize]
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Get Data</h1>
+
+<button onclick="@getbills">Bills</button>
+<button onclick="@getcontacts">Contacts</button>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+@if (bills == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Sub Total</th>
+                <th>Tax</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in bills)
+            {
+                <tr>
+                    <td>@forecast.Id</td>
+                    <td>@forecast.subtotal</td>
+                    <td>@forecast.tax</td>
+                    <td>@forecast.total</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@if (contacts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in contacts)
+            {
+                <tr>
+                    <td>@forecast.Id</td>
+                    <td>@forecast.Name</td>
+                    <td>@forecast.Email</td>
+                    <td>@forecast.Message</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    Bills[]? bills;
+    Contact[]? contacts;
+
+    async void getbills()
+    {
+        bills = await Http.GetFromJsonAsync<Bills[]>("api/Bills");
+        StateHasChanged();
+    }
+    async void getcontacts()
+    {
+        contacts = await Http.GetFromJsonAsync<Contact[]>("api/Contacts");
+        StateHasChanged();
+    }
+    
+}

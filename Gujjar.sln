@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gujjar.Server", "Gujjar\Server\Gujjar.Server.csproj", "{DD0E65E5-492D-4C9C-9F5B-310C92903B93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gujjar.Client", "Gujjar\Client\Gujjar.Client.csproj", "{79E9642A-A4B5-44BE-814D-758F3F0AC326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gujjar.Shared", "Gujjar\Shared\Gujjar.Shared.csproj", "{B894DFF4-8009-41F3-BB09-5D3B43C7878C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD0E65E5-492D-4C9C-9F5B-310C92903B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0E65E5-492D-4C9C-9F5B-310C92903B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0E65E5-492D-4C9C-9F5B-310C92903B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0E65E5-492D-4C9C-9F5B-310C92903B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79E9642A-A4B5-44BE-814D-758F3F0AC326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79E9642A-A4B5-44BE-814D-758F3F0AC326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79E9642A-A4B5-44BE-814D-758F3F0AC326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79E9642A-A4B5-44BE-814D-758F3F0AC326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B894DFF4-8009-41F3-BB09-5D3B43C7878C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B894DFF4-8009-41F3-BB09-5D3B43C7878C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B894DFF4-8009-41F3-BB09-5D3B43C7878C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B894DFF4-8009-41F3-BB09-5D3B43C7878C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93A35A1B-C082-49C9-8F41-792655C2762E}
+	EndGlobalSection
+EndGlobal
